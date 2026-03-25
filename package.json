@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "@types/react": "^19.2.10",
+    "@types/react-dom": "^19.2.3"
+  },
+  "dependencies": {
+    "@langchain/langgraph-sdk": "^1.5.5"
+  }
+}
