@@ -2,8 +2,6 @@ import os
 import time
 from typing_extensions import runtime
 import uuid
-import tkinter as tt
-from tkinter import messagebox
 from pathlib import Path
 from dotenv import load_dotenv
 from langchain_tavily import TavilySearch
