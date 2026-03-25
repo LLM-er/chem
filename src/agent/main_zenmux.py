@@ -1,9 +1,7 @@
 import os
 import time
-from typing_extensions import runtime
 import uuid
 from pathlib import Path
-from dotenv import load_dotenv
 from langchain_tavily import TavilySearch
 from langchain.messages import AIMessage
 from langchain.agents import AgentState, create_agent
@@ -17,11 +15,8 @@ from deepagents.middleware import (
     SubAgentMiddleware
 )
 
-load_dotenv()
-
 reports_dir = Path("./reports") # 报告文件存放在./reports目录下，在生成新报告前删除旧报告，
 reports_dir.mkdir(exist_ok=True) # exist_ok=True：当目录已经存在时，不要报错。
-
 
 # 搜索工具（所有代理共享）
 internet_search_tool = TavilySearch(max_results=5,topic="general")
